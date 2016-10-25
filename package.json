@@ -1,0 +1,28 @@
+{
+  "name": "cortecerto",
+  "version": "1.0.0",
+  "description": "Primeira versão do aplicativo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "corte",
+    "e",
+    "empacotamento",
+    "web",
+    "app",
+    "inovação"
+  ],
+  "author": "LHC,LRM,ALC",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "express3-handlebars": "^0.5.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}

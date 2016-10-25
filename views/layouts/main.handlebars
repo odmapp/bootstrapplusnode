@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Meadowlark Travel</title>
+		
+		
+		{{#if showTests}}
+			<link rel="stylesheet" href="/vendor/mocha.css">
+		{{/if}}
+		<script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		
+		
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	</head>
+
+
+	
+	<body>
+	<body>
+	<header><img src="/img/logo.png" alt="Meadowlark Travel Logo"></header>
+	
+		<nav class="navbar navbar-inverse">
+			<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">CORTE::ÓTIMO</a>
+			</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+					<li><a href="/instructions">Instruções</a></li>
+					<li><a href="/about">Sobre</a></li>
+					<li class="divider-vertical hidden-xs"></li>
+					<li><a href="/solver">Solver</a></li>
+					<li><a href="/projects">Projetos</a></li>
+					<li><a href="/kilns">Fornos</a></li>
+					<li><a href="/items">Itens</a></li>
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+				<li>
+				<div id="action-buttons" style="display: flex; flex-wrap: wrap; -webkit-box-pack: center; justify-content: center;padding-right:10px;">
+					<a href="/logout" class="btn btn-default navbar-btn btn-color" style="width:100%; max-width:300px;">Sair</a>
+					</div>
+					</li> 
+					<li>
+					<div id="action-buttons" style="display: flex; flex-wrap: wrap; -webkit-box-pack: center; justify-content: center; min-width:220px; padding-right:10px;">
+					<a href="/login" class="btn btn-default navbar-btn btn-color" style="width:45%; margin-right:5px;">Entrar</a>
+					<a href="/user/new" class="btn btn-primary navbar-btn" style="min-width: 100px; width:45%; margin-left:5px;">Registrar-se</a>
+					</div>
+					</li>
+
+					</ul>      
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav>
+
+
+		{{{body}}}
+
+		
+		{{#if showTests}}
+			<div id="mocha"></div>
+			<script src="/vendor/mocha.js"></script>
+			<script src="/vendor/chai.js"></script>
+			<script>
+				mocha.ui('tdd');
+				var assert = chai.assert;
+			</script>
+			<script src="/qa/tests-global.js"></script>
+			{{#if pageTestScript}}
+				<script src="{{pageTestScript}}"></script>
+			{{/if}}
+				<script>mocha.run();</script>
+		{{/if}}
+	</body>
+</html>
